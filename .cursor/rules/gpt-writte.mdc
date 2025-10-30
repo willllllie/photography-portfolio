@@ -1,0 +1,97 @@
+---
+alwaysApply: false
+---
+
+# ================================================
+# Cursor Rules — Photography Portfolio Template
+# ================================================
+# Purpose: Create clean, performant photography websites
+# using HTML, CSS, and JS (no frameworks required)
+# ================================================
+
+rules:
+
+  # --------------------------------
+  # 🧭 Project Structure
+  # --------------------------------
+  - Always use semantic HTML: <header>, <main>, <section>, <footer>.
+  - Use a single index.html with section-based navigation when possible.
+  - For multi-page sites, use Swup.js or the Page Transition API to animate transitions smoothly.
+  - Store all assets in an /assets/ directory (e.g., /assets/images/, /assets/css/, /assets/js/).
+  - Maintain descriptive file and folder names for projects and images.
+
+  # --------------------------------
+  # 🎨 Styling & Layout
+  # --------------------------------
+  - Default aesthetic: minimal, white or neutral background, centered content, generous whitespace.
+  - Use CSS flexbox or grid for layout — no positioning hacks.
+  - Prefer Tailwind CSS for responsive spacing and typography if included, otherwise use modular CSS.
+  - Use consistent typography hierarchy: large for titles, medium for text, small for captions.
+  - Include smooth CSS transitions (opacity, transform) for hovers and fades.
+  - Always design mobile-first; ensure layouts are fully responsive.
+
+  # --------------------------------
+  # ⚡ Performance & Image Handling
+  # --------------------------------
+  - Use <img loading="lazy"> for all images to improve load performance.
+  - Prefer modern image formats (WebP or AVIF) with fallbacks to JPEG.
+  - Always define image aspect ratios or dimensions to avoid layout shifts.
+  - Implement IntersectionObserver for lazy or delayed loading where appropriate.
+  - For click-to-advance viewers, preload only the previous and next image.
+  - Optimize image resolution for web; avoid loading full RAW exports.
+
+  # --------------------------------
+  # 🧠 JavaScript Practices
+  # --------------------------------
+  - Use modern ES6+ syntax (const, let, arrow functions, template literals).
+  - Keep scripts modular and self-contained; one JS file per component if needed.
+  - For navigation: use fade or slide transitions instead of instant DOM swaps.
+  - Avoid large libraries unless essential; keep dependencies minimal.
+  - Use IntersectionObserver instead of scroll event listeners for performance.
+  - Include basic accessibility (keyboard navigation, alt text, focus states).
+
+  # --------------------------------
+  # 🪶 Navigation
+  # --------------------------------
+  - The nav bar should be fixed at the top or side and minimal in design.
+  - Clicking between sections should not reload the page; use JS section toggling or Swup.js.
+  - Maintain consistent navigation spacing and alignment across breakpoints.
+  - Use clear hover/active states with subtle transitions.
+
+  # --------------------------------
+  # 🧩 Components
+  # --------------------------------
+  - Name reusable elements descriptively (e.g., .image-viewer, .archive-grid, .nav-bar).
+  - Image carousels should fade smoothly on click and preload nearby images.
+  - Horizontal archives should use flexbox with overflow-x: auto and scroll-snap.
+  - Support keyboard arrow navigation for carousels where possible.
+
+  # --------------------------------
+  # 🧹 Code Quality
+  # --------------------------------
+  - Comment all non-trivial JS functions with a short description.
+  - Remove console.log() before final output.
+  - Use consistent 2-space indentation.
+  - Keep HTML attributes lowercase and double-quoted.
+  - Include TODO comments for incomplete sections.
+  - Maintain clean, minimal markup — avoid unnecessary wrappers.
+
+  # --------------------------------
+  # 🪞 Accessibility & UX
+  # --------------------------------
+  - Include descriptive alt text for every image.
+  - Ensure readable contrast between text and background.
+  - Allow tab navigation for all interactive elements.
+  - Avoid autoplaying or looping animations without user input.
+
+  # --------------------------------
+  # 🧰 Optional Enhancements
+  # --------------------------------
+  - Use blur-up placeholders for lazy-loaded images when practical.
+  - Apply subtle fade-in animations on image load.
+  - Implement a simple lightbox for viewing images fullscreen.
+  - If using Swup.js, define a .transition-fade class for consistent cross-page animation.
+
+# ================================================
+# End of Cursor Rules — Photography Portfolio
+# ================================================

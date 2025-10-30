@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Photography — Portfolio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="min-h-screen bg-white text-neutral-900 antialiased">
+    <header class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur border-b border-neutral-200">
+      <nav class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+        <a href="#works" class="font-medium tracking-wide">Portfolio</a>
+        <ul class="flex items-center gap-6 text-sm">
+          <li><a id="nav-works" href="#works" class="py-2 hover:opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20">Works</a></li>
+          <li><a id="nav-index" href="#index" class="py-2 hover:opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20">Index</a></li>
+          <li><a id="nav-information" href="#information" class="py-2 hover:opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20">Information</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+      <section id="section-works" class="opacity-0 transition-opacity duration-300" hidden>
+        <div class="mb-6 flex items-center justify-between">
+          <h1 class="text-xl font-semibold">Works</h1>
+          <div class="flex items-center gap-3">
+            <label class="inline-flex items-center gap-2 text-sm">
+              <input id="toggle-captions" type="checkbox" class="h-4 w-4 rounded border-neutral-300 text-neutral-900 focus:ring-neutral-900" />
+              <span>Show captions</span>
+            </label>
+          </div>
+        </div>
+        <div id="projects-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <div id="gallery" class="mt-8 space-y-6" hidden></div>
+        <button id="back-to-projects" class="mt-6 text-sm underline underline-offset-4 hover:opacity-70" hidden>Back to projects</button>
+      </section>
+
+      <section id="section-index" class="opacity-0 transition-opacity duration-300" hidden>
+        <h1 class="text-xl font-semibold mb-6">Index</h1>
+        <div id="index-list" class="divide-y divide-neutral-200"></div>
+      </section>
+
+      <section id="section-information" class="opacity-0 transition-opacity duration-300" hidden>
+        <h1 class="text-xl font-semibold mb-4">Information</h1>
+        <div class="prose prose-neutral max-w-none">
+          <p>Artist statement and contact information placeholder.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="/src/main.js" type="module"></script>
+  </body>
+  </html>
+
+
