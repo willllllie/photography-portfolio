@@ -42,11 +42,17 @@ async function navigate(to) {
 
   if (current && current[0] === to) return; // already on it
 
-  // update aria-current on nav
+  // update active state on nav (opacity classes only)
   Object.entries(navLinks).forEach(([key, link]) => {
     if (!link) return;
-    if (key === to) link.setAttribute("aria-current", "page");
-    else link.removeAttribute("aria-current");
+    const isActive = key === to;
+    if (isActive) {
+      link.classList.remove("opacity-30");
+      link.classList.add("opacity-100");
+    } else {
+      link.classList.remove("opacity-100");
+      link.classList.add("opacity-30");
+    }
   });
 
   const transitionClass = prefersReducedMotion ? "" : "transition-opacity duration-300";
